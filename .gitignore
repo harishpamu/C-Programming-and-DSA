@@ -1,0 +1,25 @@
+# Object files
+*.o
+
+# Executables
+main
+*.out
+*.exe
+
+# Build folders
+build/
+cmake-build-debug/
+cmake-build-release/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Editor files
+.vscode/
+*.swp
+*~
+
+# Log files
+*.log
