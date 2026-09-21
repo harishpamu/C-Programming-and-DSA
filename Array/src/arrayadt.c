@@ -117,6 +117,42 @@ void rotateLeft(Array *a){
     a->data[a->size - 1] = first;
 }
 
+void rotateLeftbyN(Array *a, int n){
+    n = n % a->size; //handles the n > size
+
+    for(int i = 0; i < n; i++){
+        rotateLeft(a);
+    }
+}
+
+// ==== Reversal Algorithm ====
+// void reverseN(Array *a, int start, int end){
+//     while(start < end){
+//         int temp = a->data[start];
+//         a->data[start] = a->data[end];
+//         a->data[end] = temp;
+
+//         start++;
+//         end--;
+//     }
+// }
+
+// void rotateLeftbyN(Array *a, int n){
+//     n = n % a->size; //handles the n > size
+
+//     reverseN(a, 0, n - 1); // 2 1 3 4 5
+//     reverseN(a, n, a->size - 1); // 2 1 5 4 3
+//     reverseN(a, 0, a->size - 1); // 3 4 5 1 2
+// }
+
+// void rotateRightbyN(Array *a, int n){
+//     n = n % a->size;
+
+//     reverseN(a, 0, a->size - 1); // 5 4 3 2 1
+//     reverseN(a, 0, n - 1); //4 5 3 2 1
+//     reverseN(a, n, a->size - 1); // 4 5 1 2 3
+    
+// }
 
 void rotateRight(Array *a){
     int last = a->data[a->size - 1];
