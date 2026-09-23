@@ -1,5 +1,11 @@
 #include<stdio.h>
 
+/*
+* Frequency Array
+*
+* Time : O(n)
+* Space : O(256)
+*/
 void removeDuplicates(char str[]){
     int hash[256] = {0};
     int i = 0;
@@ -43,7 +49,7 @@ void printDuplicates(char str[]){
 }
 
 int main(){
-    char str[] = "programming";
+    char str[] = "HAHA";
     printDuplicates(str);
     printf("\n");
 
