@@ -63,12 +63,15 @@ int isBalanced(char str[]){
 }
 
 int main(){
-    char expr[] = "{[()]}";
+    char expr1[] = "{[()]}";
+    char expr2[] = "{[()]";      // Missing closing brace
+    char expr3[] = "[(])";        // Wrong order of closing
+    char expr4[] = "A + [B * (C)]"; // Mixed algebraic text
 
-    if(isBalanced(expr))
-        printf("Balanced\n");
-    else
-        printf("Not Balanced\n");
+    printf("Expr 1: %s\n", isBalanced(expr1) ? "Balanced" : "Not Balanced");
+    printf("Expr 2: %s\n", isBalanced(expr2) ? "Balanced" : "Not Balanced");
+    printf("Expr 3: %s\n", isBalanced(expr3) ? "Balanced" : "Not Balanced");
+    printf("Expr 4: %s\n", isBalanced(expr4) ? "Balanced" : "Not Balanced");
 
     return 0;
 }
