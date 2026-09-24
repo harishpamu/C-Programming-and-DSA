@@ -1,6 +1,12 @@
 #include"insert.h"
 #include"utils.h"
 
+/*
+* Insert at beginning.
+*
+* Time Complexity : O(1)
+* Space Complexity : O(1)
+*/
 Node* insertAtBegin(Node* head, int value){
     Node* newNode = createNode(value);
     if(newNode == NULL){
@@ -13,6 +19,12 @@ Node* insertAtBegin(Node* head, int value){
     return head;
 }
 
+/*
+* Insert at end.
+*
+* Time Complexity : O(n)
+* Space Complexity : O(1)
+*/
 Node* insertAtEnd(Node* head, int value){
     Node* newNode = createNode(value);
     if(newNode == NULL){
@@ -32,6 +44,18 @@ Node* insertAtEnd(Node* head, int value){
     return head;
 }
 
+/*
+* Insert at a given position.
+* Position starts from 1.
+*
+* Example:
+* 10->20->30
+* pos = 2, value = 15
+* 10->15->20->30
+*
+* Time Complexity : O(n)
+* Space Complexity : O(1)
+*/
 Node* insertAtPosition(Node* head, int value, int pos){
     /*
     If pos == 1, insert at beginning.
@@ -65,6 +89,12 @@ Node* insertAtPosition(Node* head, int value, int pos){
     return head;
 }
 
+/*
+* Insert after a given key.
+*
+* Time Complexity : O(n)
+* Space Complexity : O(1)
+*/
 Node* insertAfter(Node* head, int key, int value){
     /*
     Traverse the list.
@@ -92,6 +122,12 @@ Node* insertAfter(Node* head, int key, int value){
     return head;
 }
 
+/*
+* Insert before a given key.
+*
+* Time Complexity : O(n)
+* Space Complexity : O(1)
+*/
 Node* insertBefore(Node* head, int key, int value){
     Node* newNode = createNode(value);
     if(newNode == NULL){

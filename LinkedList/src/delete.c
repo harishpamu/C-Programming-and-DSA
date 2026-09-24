@@ -1,5 +1,11 @@
 #include"delete.h"
 
+/*
+* Delete first node.
+*
+* Time Complexity : O(1)
+* Space Complexity : O(1)
+*/
 Node* deleteAtBegin(Node* head){
     if(head == NULL){
         printf("List is Empty\n");
@@ -13,6 +19,12 @@ Node* deleteAtBegin(Node* head){
     return head;
 }
 
+/*
+* Delete last node.
+*
+* Time Complexity : O(n)
+* Space Complexity : O(1)
+*/
 Node* deleteAtEnd(Node* head){
     if(head == NULL){
         printf("List is Empty\n");
@@ -34,6 +46,14 @@ Node* deleteAtEnd(Node* head){
     return head;
 }
 
+/*
+* Delete node at a given position.
+*
+* Position starts from 1.
+*
+* Time Complexity : O(n)
+* Space Complexity : O(1)
+*/
 Node* deleteAtPosition(Node* head, int pos){
     if(head == NULL || pos < 1){
         return head;
@@ -59,6 +79,13 @@ Node* deleteAtPosition(Node* head, int pos){
     return head;
 }
 
+/*
+* Delete first occurrence
+* of a given value.
+*
+* Time Complexity : O(n)
+* Space Complexity : O(1)
+*/
 Node* deleteByValue(Node* head, int value){
     if(head == NULL){
         printf("List is Empty\n");
